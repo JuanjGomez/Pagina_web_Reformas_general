@@ -88,8 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Crear botón dinámicamente
 const scrollTopBtn = document.createElement('button');
 scrollTopBtn.innerHTML = '↑';
-scrollTopBtn.className = 'fixed bottom-24 right-4 bg-secondary text-white w-12 h-12 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-secondary-dark z-50';
+scrollTopBtn.className = 'fixed bottom-28 right-4 md:bottom-24 md:right-6 bg-secondary text-white w-12 h-12 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-secondary-dark z-[9999]';
 scrollTopBtn.setAttribute('aria-label', 'Volver arriba');
+scrollTopBtn.style.fontSize = '24px';
 document.body.appendChild(scrollTopBtn);
 
 // Mostrar/ocultar botón según scroll

@@ -4,20 +4,27 @@
 
 :root {
   /* Colores Principales */
-  --primary: #FF6B35;        /* Naranja vibrante */
-  --primary-dark: #E85A28;   
-  --secondary: #1E3A8A;      /* Azul profundo */
-  --accent: #10B981;         /* Verde éxito */
-  
+  --primary: #FF6B35;
+  /* Naranja vibrante */
+  --primary-dark: #E85A28;
+  --secondary: #1E3A8A;
+  /* Azul profundo */
+  --accent: #10B981;
+  /* Verde éxito *
+
   /* Fuentes */
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
-  
+
   /* Sombras */
   --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.3);
-  
+
   /* Transiciones */
   --transition: 300ms ease-in-out;
+
+  --esp-small: 0.5rem;
+  --esp-medium: 1rem;
+  --esp-large: 2rem;
 }
 
 /* ============================================
@@ -33,7 +40,12 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
 
@@ -56,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: left 0.5s;
 }
 
@@ -66,23 +78,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-premium:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2), var(--shadow-glow);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), var(--shadow-glow);
 }
 
 /* ============================================
    COMPONENTE: Card con Glassmorphism
-   ============================================ */
-
+   ============================================*/
 .card-glass {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   transition: all var(--transition);
 }
 
 .card-glass:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 107, 53, 0.2);
 }
 
 /* ============================================
@@ -94,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -105,9 +120,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Delays para animaciones escalonadas */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
 
 /* ============================================
    HEADER CON BACKDROP BLUR
@@ -148,16 +171,52 @@ h1, h2, h3, h4, h5, h6 {
   transition: all var(--transition);
   animation: pulse 2s ease-in-out infinite;
 }
+
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }
+
 .whatsapp-float svg {
   width: 32px;
   height: 32px;
   fill: white;
 }
+
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* ============================================
+   UTILIDADES ADICIONALES
+   ============================================ */
+
+/* Sombras mejoradas para cards */
+.shadow-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-card-hover:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Bordes sutiles para mejor definición */
+.border-subtle {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Fondo con patrón sutil */
+.bg-pattern {
+  background-image:
+    radial-gradient(circle at 25px 25px, rgba(255, 107, 53, 0.03) 2%, transparent 0%),
+    radial-gradient(circle at 75px 75px, rgba(30, 58, 138, 0.03) 2%, transparent 0%);
+  background-size: 100px 100px;
 }
