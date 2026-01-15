@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Permitir todos los crawlers principales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Bloquear crawlers no deseados
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://reformaspro.netlify.app/sitemap.xml
