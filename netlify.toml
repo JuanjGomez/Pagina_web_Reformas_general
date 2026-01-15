@@ -50,3 +50,13 @@
 #   from = "/contacto"
 #   to = "/pages/contacto.html"
 #   status = 200
+
+
+[build]
+  publish = "."
+  command = "echo 'No build required'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

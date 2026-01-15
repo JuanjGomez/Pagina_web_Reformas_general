@@ -1,222 +1,673 @@
-/* ============================================
-   VARIABLES DE DISEÑO (Design Tokens)
-   ============================================ */
+/* Estilos personalizados complementarios a Tailwind */
 
+/* Variables CSS */
 :root {
-  /* Colores Principales */
-  --primary: #FF6B35;
-  /* Naranja vibrante */
-  --primary-dark: #E85A28;
-  --secondary: #1E3A8A;
-  /* Azul profundo */
-  --accent: #10B981;
-  /* Verde éxito *
-
-  /* Fuentes */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  /* Sombras */
-  --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.3);
-
-  /* Transiciones */
-  --transition: 300ms ease-in-out;
-
-  --esp-small: 0.5rem;
-  --esp-medium: 1rem;
-  --esp-large: 2rem;
+    --primary-blue: #2563eb;
+    --primary-orange: #f97316;
+    --dark-bg: #111827;
 }
 
-/* ============================================
-   IMPORTAR GOOGLE FONTS
-   ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
-
-/* ============================================
-   ESTILOS BASE
-   ============================================ */
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-  font-family: var(--font-body);
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
+/* Navegación */
+.nav-link {
+    color: #374151;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+    text-decoration: none;
 }
 
-/* ============================================
-   COMPONENTE: Botón Premium con Efecto Brillo
-   ============================================ */
-
-.btn-premium {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-  transition: all var(--transition);
+.nav-link:hover {
+    color: var(--primary-blue);
 }
 
-/* Efecto de brillo que se desliza */
-.btn-premium::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: left 0.5s;
+.nav-link.active {
+    color: var(--primary-blue);
 }
 
-.btn-premium:hover::before {
-  left: 100%;
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background-color: var(--primary-blue);
 }
 
-.btn-premium:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), var(--shadow-glow);
+.mobile-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #374151;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    text-decoration: none;
 }
 
-/* ============================================
-   COMPONENTE: Card con Glassmorphism
-   ============================================*/
-.card-glass {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  transition: all var(--transition);
+.mobile-nav-link:hover {
+    color: var(--primary-blue);
+    background-color: #f3f4f6;
 }
 
-.card-glass:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-  border-color: rgba(255, 107, 53, 0.2);
+.mobile-nav-link.active {
+    color: var(--primary-blue);
+    background-color: #eff6ff;
 }
 
-/* ============================================
-   ANIMACIONES
-   ============================================ */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Botones */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
 }
 
-/* Delays para animaciones escalonadas */
-.delay-100 {
-  animation-delay: 100ms;
+.btn-secondary {
+    background-color: white;
+    color: var(--primary-blue);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--primary-blue);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.delay-200 {
-  animation-delay: 200ms;
+.btn-secondary:hover {
+    background-color: #f9fafb;
+    box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.1);
 }
 
-.delay-300 {
-  animation-delay: 300ms;
+.btn-outline {
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-/* ============================================
-   HEADER CON BACKDROP BLUR
-   ============================================ */
-
-.header-blur {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95);
+.btn-outline:hover {
+    background-color: var(--primary-blue);
+    color: white;
 }
 
-/* ============================================
-   UTILIDADES PERSONALIZADAS
-   ============================================ */
-
-.text-gradient {
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Cards */
+.service-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: block;
 }
 
-/* ============================================
-   BOTÓN WHATSAPP FLOTANTE
-   ============================================ */
+.service-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #93c5fd;
+    transform: translateY(-4px);
+}
+
+.service-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer-link {
+    color: #9ca3af;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #374151;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+/* WhatsApp Float */
 .whatsapp-float {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-  z-index: 999;
-  transition: all var(--transition);
-  animation: pulse 2s ease-in-out infinite;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    z-index: 40;
+    text-decoration: none;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.whatsapp-float svg {
-  width: 32px;
-  height: 32px;
-  fill: white;
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes pulse {
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
 
-  0%,
-  100% {
-    transform: scale(1);
-  }
+/* Efectos hover para imágenes */
+.img-hover-zoom {
+    overflow: hidden;
+}
 
-  50% {
+.img-hover-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
     transform: scale(1.05);
-  }
 }
 
-/* ============================================
-   UTILIDADES ADICIONALES
-   ============================================ */
-
-/* Sombras mejoradas para cards */
-.shadow-card {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-.shadow-card-hover:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
 }
 
-/* Bordes sutiles para mejor definición */
-.border-subtle {
-  border: 1px solid rgba(0, 0, 0, 0.06);
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-blue);
+    border-radius: 5px;
 }
 
-/* Fondo con patrón sutil */
-.bg-pattern {
-  background-image:
-    radial-gradient(circle at 25px 25px, rgba(255, 107, 53, 0.03) 2%, transparent 0%),
-    radial-gradient(circle at 75px 75px, rgba(30, 58, 138, 0.03) 2%, transparent 0%);
-  background-size: 100px 100px;
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive adicional */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.25rem;
+    }
+    
+    h2 {
+        font-size: 1.875rem;
+    }
+    
+    .whatsapp-float {
+        bottom: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Estilos adicionales para la página de servicios */
+
+/* FAQ Styles */
+.faq-question {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e5e7eb !important;
+}
+
+.faq-answer {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Service badge styles */
+.bg-brown-500 {
+    background-color: #92400e;
+}
+
+/* Image hover effects */
+.service-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.service-image-container img {
+    transition: transform 0.5s ease;
+}
+
+.service-image-container:hover img {
+    transform: scale(1.05);
+}
+
+.service-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.service-image-container:hover .service-image-overlay {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-card-mobile {
+        flex-direction: column;
+    }
+    
+    .service-card-mobile img {
+        width: 100% !important;
+        height: 200px !important;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Print styles */
+@media print {
+    .whatsapp-float,
+    .btn-primary,
+    .btn-secondary {
+        display: none !important;
+    }
+}
+
+/* Estilos adicionales para la página Sobre Nosotros */
+
+/* Timeline */
+.timeline-line {
+    position: relative;
+}
+
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #93c5fd;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #2563eb;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Animación para los valores */
+.value-card {
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para las imágenes de colaboradores */
+.collaborator-img {
+    transition: transform 0.3s ease;
+}
+
+.collaborator-img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para testimonios */
+.testimonial-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 120px;
+    color: rgba(37, 99, 235, 0.05);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+/* Responsive adjustments para timeline */
+@media (max-width: 768px) {
+    .timeline-line::before {
+        left: 0;
+    }
+    
+    .timeline-dot {
+        left: 0;
+    }
+    
+    .timeline-content-left,
+    .timeline-content-right {
+        margin-left: 2rem;
+        width: calc(100% - 2rem);
+    }
+}
+
+/* Efecto de hover para las tarjetas de valores */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Estilos para las citas */
+.quote-mark {
+    font-size: 80px;
+    color: #2563eb;
+    opacity: 0.1;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+/* Animación de aparición para las secciones */
+.section-fade-in {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los badges de certificaciones */
+.cert-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    margin: 0.25rem;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+/* Estilos específicos para la página de contacto */
+
+/* Estilos para el formulario */
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input.border-red-500 {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Checkboxes y radio buttons personalizados */
+input[type="checkbox"],
+input[type="radio"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: #3b82f6;
+}
+
+/* Estilos para el mapa */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.map-container iframe {
+    border: 0;
+}
+
+/* Estilos para los FAQs de contacto */
+.faq-question-contacto {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-answer-contacto {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los badges de zonas */
+.zone-badge {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: all 0.3s;
+}
+
+.zone-badge:hover {
+    background-color: #bfdbfe;
+    transform: translateY(-1px);
+}
+
+/* Estilos para el estado de carga */
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos para los mensajes de éxito/error */
+.alert-success {
+    background-color: #d1fae5;
+    border-color: #a7f3d0;
+    color: #065f46;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+/* Estilos responsivos para formulario */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-card {
+        text-align: center;
+    }
+    
+    .contact-info-card .flex {
+        justify-content: center;
+    }
+}
+
+/* Estilos para grupos de checkboxes/radios */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+/* Estilos para textarea */
+textarea.form-input {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Placeholder personalizado */
+.form-input::placeholder {
+    color: #9ca3af;
 }

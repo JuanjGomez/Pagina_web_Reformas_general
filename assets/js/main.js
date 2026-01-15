@@ -1,183 +1,137 @@
-// ============================================
-// MOBILE MENU
-// ============================================
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-
-if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-
-        // Cambiar icono del menú
-        menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
-    });
-
-    // Cerrar menú al hacer click en un enlace
-    const mobileLinks = mobileMenu.querySelectorAll('a');
+// Menú móvil
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Cambiar ícono
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.className = 'fas fa-bars text-2xl';
+            } else {
+                icon.className = 'fas fa-times text-2xl';
+            }
+        });
+    }
+    
+    // Cerrar menú al hacer clic en enlace móvil
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuBtn.textContent = '☰';
-        });
-    });
-}
-
-// ============================================
-// HEADER SCROLL EFFECT
-// ============================================
-const header = document.querySelector('header');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-
-    // Añadir sombra al hacer scroll
-    if (currentScroll > 50) {
-        header.classList.add('shadow-lg');
-    } else {
-        header.classList.remove('shadow-lg');
-    }
-
-    lastScroll = currentScroll;
-});
-
-// ============================================
-// SMOOTH SCROLL PARA ANCLAS
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// ============================================
-// ANIMACIONES ON SCROLL (Intersection Observer)
-// ============================================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-            // Opcional: dejar de observar después de animar
-            // observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observar todos los elementos con clase 'observe'
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.observe').forEach(el => {
-        observer.observe(el);
-    });
-});
-
-// ============================================
-// BOTÓN SCROLL TO TOP
-// ============================================
-// Crear botón dinámicamente
-const scrollTopBtn = document.createElement('button');
-scrollTopBtn.innerHTML = '↑';
-scrollTopBtn.className = 'fixed bottom-28 right-4 md:bottom-24 md:right-6 bg-secondary text-white w-12 h-12 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-secondary-dark z-[9999]';
-scrollTopBtn.setAttribute('aria-label', 'Volver arriba');
-scrollTopBtn.style.fontSize = '24px';
-document.body.appendChild(scrollTopBtn);
-
-// Mostrar/ocultar botón según scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-        scrollTopBtn.classList.add('opacity-100');
-    } else {
-        scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
-        scrollTopBtn.classList.remove('opacity-100');
-    }
-});
-
-// Scroll to top al hacer click
-scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// ============================================
-// ANIMACIÓN DE NÚMEROS (Counter Animation)
-// ============================================
-function animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, ''));
-    const duration = 2000; // 2 segundos
-    const increment = target / (duration / 16); // 60 FPS
-    let current = 0;
-
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = element.textContent.replace(/\d+/, target);
-            clearInterval(timer);
-        } else {
-            element.textContent = element.textContent.replace(/\d+/, Math.floor(current));
-        }
-    }, 16);
-}
-
-// Animar contadores cuando sean visibles
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll('.text-5xl');
-            counters.forEach(counter => {
-                if (!counter.dataset.animated) {
-                    animateCounter(counter);
-                    counter.dataset.animated = 'true';
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                if (mobileMenuButton) {
+                    mobileMenuButton.querySelector('i').className = 'fas fa-bars text-2xl';
                 }
-            });
-            counterObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-// Observar sección de estadísticas
-document.addEventListener('DOMContentLoaded', () => {
-    const statsSection = document.querySelector('.grid.md\\:grid-cols-4');
-    if (statsSection) {
-        counterObserver.observe(statsSection);
-    }
-});
-
-// ============================================
-// LAZY LOADING DE IMÁGENES
-// ============================================
-if ('loading' in HTMLImageElement.prototype) {
-    // El navegador soporta lazy loading nativo
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-        img.src = img.dataset.src || img.src;
-    });
-} else {
-    // Fallback para navegadores antiguos
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src || img.src;
-                imageObserver.unobserve(img);
             }
         });
     });
-
-    document.querySelectorAll('img').forEach(img => imageObserver.observe(img));
-}
-
-console.log('✅ ReformasPro - JavaScript cargado correctamente');
+    
+    // Animación de elementos al hacer scroll
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.service-card');
+        
+        elements.forEach((element, index) => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (elementPosition < screenPosition) {
+                setTimeout(() => {
+                    element.classList.add('fade-in-up');
+                }, index * 100);
+            }
+        });
+    }
+    
+    // Ejecutar al cargar y al hacer scroll
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
+    
+    // Contador animado
+    const projectsCounter = document.getElementById('projectsCounter');
+    if (projectsCounter) {
+        let count = 0;
+        const target = 250;
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                const updateCounter = () => {
+                    if (count < target) {
+                        count += increment;
+                        projectsCounter.textContent = Math.floor(count) + '+';
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        projectsCounter.textContent = target + '+';
+                    }
+                };
+                updateCounter();
+                observer.unobserve(projectsCounter);
+            }
+        });
+        
+        observer.observe(projectsCounter);
+    }
+    
+    // Smooth scroll para anclas internas
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href.startsWith('#!')) return;
+            
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Formulario de contacto (si existe en la página)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validación básica
+            const nombre = document.getElementById('nombre');
+            const email = document.getElementById('email');
+            const telefono = document.getElementById('telefono');
+            const mensaje = document.getElementById('mensaje');
+            
+            if (!nombre.value || !email.value || !telefono.value || !mensaje.value) {
+                alert('Por favor, completa todos los campos obligatorios.');
+                return;
+            }
+            
+            // Validar email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                alert('Por favor, introduce un email válido.');
+                return;
+            }
+            
+            // Mostrar mensaje de éxito
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
+            submitBtn.disabled = true;
+            
+            // Simular envío (para Formspree, esto se reemplaza con el envío real)
+            setTimeout(() => {
+                alert('¡Gracias! Tu mensaje ha sido enviado. Te contactaremos en 24-48 horas.');
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    }
+});

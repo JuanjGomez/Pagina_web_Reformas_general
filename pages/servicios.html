@@ -5,431 +5,676 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Servicios de reformas en Barcelona: reformas integrales, locales comerciales, cocinas, baños y reparaciones. Presupuesto gratis. ☎️ 600 000 000">
-    <meta name="keywords" content="servicios reformas Barcelona, reformas integrales, locales comerciales Barcelona, reformas cocinas Barcelona, reformas baños Barcelona">
-    <link rel="canonical" href="https://reformaspro.netlify.app/pages/servicios.html">
+    <meta name="description" content="Servicios profesionales de reformas en Barcelona: reformas integrales, baños, cocinas, locales comerciales. Presupuesto gratis.">
+    <meta name="keywords" content="servicios reformas Barcelona, reformas integrales, reformas baños, cocinas modernas, reformas locales">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Servicios de Reformas en Barcelona | ReformasPro">
-    <meta property="og:description" content="Reformas integrales, locales comerciales y reparaciones profesionales en Barcelona">
-    <meta property="og:url" content="https://reformaspro.netlify.app/pages/servicios.html">
+    <title>Servicios de Reformas | Barcelona - Especialistas en Reformas Integrales</title>
     
-    <title>Servicios de Reformas en Barcelona | ReformasPro</title>
-    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    primary: {
-                        DEFAULT: '#FF6B35',
-                        dark: '#E85A28',
-                        light: '#FF8C61'
-                    },
-                    secondary: {
-                        DEFAULT: '#1E3A8A',
-                        dark: '#1E293B',
-                        light: '#3B82F6'
-                    },
-                    accent: '#10B981'
-                },
-                fontFamily: {
-                    heading: ['Outfit', 'sans-serif'],
-                    body: ['Inter', 'sans-serif']
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#f97316',
+                    }
                 }
             }
         }
-    }
-</script>
-<script src="https://cdn.tailwindcss.com"></script>
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/custom.css">
-    <script defer src="../assets/js/main.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/000000/hammer.png">
 </head>
-<body class="font-sans text-gray-800">
-    <header class="header-blur fixed w-full top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold text-gradient">
-                ReformasPro
-            </div>
-            
-            <nav class="hidden md:flex space-x-6">
-                <a href="../index.html" class="hover:text-[#FF6B35] transition-colors">Inicio</a>
-                <a href="./servicios.html" class="hover:text-[#FF6B35] transition-colors font-semibold">Servicios</a>
-                <a href="./sobre-nosotros.html" class="hover:text-[#FF6B35] transition-colors">Sobre Nosotros</a>
-                <a href="./contacto.html" class="hover:text-[#FF6B35] transition-colors">Contacto</a>
-            </nav>
-            
-            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-        </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
-            <a href="../index.html" class="block py-2">Inicio</a>
-            <a href="./servicios.html" class="block py-2">Servicios</a>
-            <a href="./sobre-nosotros.html" class="block py-2">Sobre Nosotros</a>
-            <a href="./contacto.html" class="block py-2">Contacto</a>
-        </div>
-    </header>
-
-    <main class="">
-        <!-- Hero Section -->
-        <section class="pt-32 pb-16 bg-gradient-to-br from-secondary to-primary/20 relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full filter blur-3xl"></div>
-                <div class="absolute bottom-10 right-10 w-96 h-96 bg-secondary rounded-full filter blur-3xl"></div>
-            </div>
-            
-            <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
-                    Nuestros <span class="text-gradient bg-white bg-clip-text">Servicios</span>
-                </h1>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto">
-                    Soluciones completas de reformas en Barcelona. Desde pequeñas reparaciones hasta proyectos integrales.
-                </p>
-            </div>
-        </section>
-
-        <!-- Servicios Principales -->
-        <section class="py-16 bg-gradient-to-b from-white to-gray-50">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Servicio 1 -->
-                    <div class="card-glass rounded-xl overflow-hidden observe group">
-                        <div class="relative h-64 overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                                alt="Reformas integrales en Barcelona"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            >
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 text-white">
-                                <div class="text-5xl mb-2">🏠</div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-3">Reformas Integrales</h3>
-                            <p class="text-gray-600 mb-4">
-                                Transformamos completamente tu vivienda. Desde la planificación hasta el último detalle.
-                            </p>
-                            <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Diseño y planificación personalizada
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Gestión completa del proyecto
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Materiales de primera calidad
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Garantía de 2 años
-                                </li>
-                            </ul>
-                            <a href="./contacto.html" class="inline-block text-primary font-semibold hover:text-primary-dark transition-colors">
-                                Solicitar presupuesto →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Servicio 2 -->
-                    <div class="card-glass rounded-xl overflow-hidden observe delay-100 group">
-                        <div class="relative h-64 overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c"
-                                alt="Reformas de locales comerciales en Barcelona"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            >
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 text-white">
-                                <div class="text-5xl mb-2">🏢</div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-3">Locales Comerciales</h3>
-                            <p class="text-gray-600 mb-4">
-                                Adaptamos tu negocio a tus necesidades cumpliendo todas las normativas.
-                            </p>
-                            <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Cumplimiento normativas
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Mínimo tiempo de cierre
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Diseño funcional y atractivo
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Licencias y permisos
-                                </li>
-                            </ul>
-                            <a href="./contacto.html" class="inline-block text-primary font-semibold hover:text-primary-dark transition-colors">
-                                Solicitar presupuesto →
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Servicio 3 -->
-                    <div class="card-glass rounded-xl overflow-hidden observe delay-200 group">
-                        <div class="relative h-64 overflow-hidden">
-                            <img
-                                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
-                                alt="Reparaciones en Barcelona"
-                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            >
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 text-white">
-                                <div class="text-5xl mb-2">🔧</div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-3">Reparaciones</h3>
-                            <p class="text-gray-600 mb-4">
-                                Soluciones rápidas y profesionales para cualquier tipo de reparación.
-                            </p>
-                            <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Electricidad y fontanería
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Pintura y acabados
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Carpintería y cerrajería
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-accent mr-2">✓</span>
-                                    Respuesta en 24h
-                                </li>
-                            </ul>
-                            <a href="./contacto.html" class="inline-block text-primary font-semibold hover:text-primary-dark transition-colors">
-                                Solicitar presupuesto →
-                            </a>
-                        </div>
-                    </div>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-blue-600">
+                        <i class="fas fa-hammer mr-2"></i>
+                        <span>Reformas<span class="text-orange-500">Barcelona</span></span>
+                    </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Servicios Adicionales -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-4">
-                    Servicios <span class="text-gradient">Especializados</span>
-                </h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Además de nuestros servicios principales, ofrecemos soluciones especializadas para cada necesidad
-                </p>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Servicio adicional 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow observe">
-                        <div class="text-4xl mb-4">🍳</div>
-                        <h4 class="text-xl font-bold mb-2">Cocinas</h4>
-                        <p class="text-gray-600 text-sm">
-                            Diseño y reforma completa de cocinas modernas y funcionales.
-                        </p>
-                    </div>
-
-                    <!-- Servicio adicional 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow observe delay-100">
-                        <div class="text-4xl mb-4">🚿</div>
-                        <h4 class="text-xl font-bold mb-2">Baños</h4>
-                        <p class="text-gray-600 text-sm">
-                            Transformamos tu baño en un espacio de confort y diseño.
-                        </p>
-                    </div>
-
-                    <!-- Servicio adicional 3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow observe delay-200">
-                        <div class="text-4xl mb-4">🎨</div>
-                        <h4 class="text-xl font-bold mb-2">Pintura</h4>
-                        <p class="text-gray-600 text-sm">
-                            Pintura interior y exterior con acabados profesionales.
-                        </p>
-                    </div>
-
-                    <!-- Servicio adicional 4 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow observe delay-300">
-                        <div class="text-4xl mb-4">⚡</div>
-                        <h4 class="text-xl font-bold mb-2">Instalaciones</h4>
-                        <p class="text-gray-600 text-sm">
-                            Instalaciones eléctricas, fontanería y climatización.
-                        </p>
-                    </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                    <a href="servicios.html" class="nav-link active">Servicios</a>
+                    <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Proceso de Trabajo -->
-        <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-4">
-                    Nuestro <span class="text-gradient">Proceso</span>
-                </h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Trabajamos de forma organizada y transparente en cada proyecto
-                </p>
-
-                <div class="grid md:grid-cols-4 gap-8">
-                    <!-- Paso 1 -->
-                    <div class="text-center observe">
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                            1
-                        </div>
-                        <h4 class="font-bold text-lg mb-2">Consulta Inicial</h4>
-                        <p class="text-gray-600 text-sm">
-                            Nos reunimos para entender tus necesidades y visión del proyecto.
-                        </p>
-                    </div>
-
-                    <!-- Paso 2 -->
-                    <div class="text-center observe delay-100">
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                            2
-                        </div>
-                        <h4 class="font-bold text-lg mb-2">Presupuesto</h4>
-                        <p class="text-gray-600 text-sm">
-                            Elaboramos un presupuesto detallado sin compromiso.
-                        </p>
-                    </div>
-
-                    <!-- Paso 3 -->
-                    <div class="text-center observe delay-200">
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                            3
-                        </div>
-                        <h4 class="font-bold text-lg mb-2">Ejecución</h4>
-                        <p class="text-gray-600 text-sm">
-                            Realizamos la obra con profesionalidad y cumpliendo plazos.
-                        </p>
-                    </div>
-
-                    <!-- Paso 4 -->
-                    <div class="text-center observe delay-300">
-                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                            4
-                        </div>
-                        <h4 class="font-bold text-lg mb-2">Entrega</h4>
-                        <p class="text-gray-600 text-sm">
-                            Entregamos tu proyecto terminado con garantía de calidad.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="bg-gradient-to-br from-secondary to-primary py-16 text-white text-center">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-4xl font-bold mb-4 text-white">
-                    ¿Listo para empezar tu proyecto?
-                </h2>
-                <p class="text-xl mb-8 text-white/90">
-                    Solicita tu presupuesto gratuito y sin compromiso
-                </p>
-                <a
-                    href="./contacto.html"
-                    class="btn-premium inline-block px-8 py-4 rounded-lg text-white font-semibold text-lg"
-                >
-                    Contactar Ahora
+                
+                <!-- CTA Button -->
+                <a href="contacto.html" class="hidden md:block btn-primary">
+                    Presupuesto Gratis
                 </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuButton" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
-        </section>
-    </main>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden bg-white py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="mobile-nav-link">Inicio</a>
+                    <a href="servicios.html" class="mobile-nav-link active">Servicios</a>
+                    <a href="sobre-nosotros.html" class="mobile-nav-link">Sobre Nosotros</a>
+                    <a href="contacto.html" class="mobile-nav-link">Contacto</a>
+                    <a href="contacto.html" class="btn-primary text-center">Presupuesto Gratis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Footer (igual que index.html) -->
+    <!-- Hero Section Servicios -->
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    Nuestros Servicios de Reformas en Barcelona
+                </h1>
+                <p class="text-xl text-blue-100 mb-8">
+                    Soluciones integrales y personalizadas para transformar tu espacio con calidad y garantía
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#contacto" class="btn-primary bg-white text-blue-600 hover:bg-gray-100">
+                        <i class="fas fa-file-alt mr-2"></i>Solicitar Presupuesto
+                    </a>
+                    <a href="tel:+34600123456" class="btn-secondary bg-white text-blue-600 hover:bg-gray-100 hover:animate-pulse">
+                        <i class="fas fa-phone mr-2"></i>Llamar para Asesoramiento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestro Proceso de Trabajo</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Garantizamos calidad y transparencia en cada proyecto con nuestra metodología probada
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Paso 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-blue-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Evaluación Inicial</h3>
+                    <p class="text-gray-600">
+                        Visita gratuita para analizar tus necesidades y tomar medidas
+                    </p>
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-blue-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Presupuesto Detallado</h3>
+                    <p class="text-gray-600">
+                        Propuesta clara con desglose de costes y plazos de ejecución
+                    </p>
+                </div>
+                
+                <!-- Paso 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-blue-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ejecución Profesional</h3>
+                    <p class="text-gray-600">
+                        Trabajo realizado por especialistas con materiales de primera calidad
+                    </p>
+                </div>
+                
+                <!-- Paso 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-blue-600">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Entrega y Garantía</h3>
+                    <p class="text-gray-600">
+                        Revisión final y garantía por escrito de todos los trabajos realizados
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Servicios Especializados</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Más de 15 años de experiencia en reformas en Barcelona. Cada proyecto es único y lo tratamos con la máxima dedicación
+                </p>
+            </div>
+
+            <!-- Reformas Integrales -->
+            <div id="integrales" class="mb-20">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Reforma integral Barcelona" 
+                                 class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-home text-blue-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Reformas Integrales</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                Transformamos completamente viviendas y locales, gestionando todos los aspectos de la reforma. Desde el diseño inicial hasta la entrega llave en mano, nos encargamos de todo para que tú solo disfrutes del resultado.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Demolición y preparación de espacios</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Instalación eléctrica y de fontanería</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Acabados de alta calidad</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Gestión de permisos y licencias</span>
+                                </div>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <p class="text-blue-800 font-medium">
+                                    <i class="fas fa-clock mr-2"></i>
+                                    <span class="font-bold">Tiempo estimado:</span> 4-8 semanas según complejidad
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Galería de proyectos integrales -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=250&q=80" 
+                         alt="Proyecto reforma integral 1" 
+                         class="rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=250&q=80" 
+                         alt="Proyecto reforma integral 2" 
+                         class="rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=250&q=80" 
+                         alt="Proyecto reforma integral 3" 
+                         class="rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=250&q=80" 
+                         alt="Proyecto reforma integral 4" 
+                         class="rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Reformas de Baños -->
+            <div id="banos" class="mb-20">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Reforma de baño Barcelona" 
+                                 class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-bath text-orange-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Reformas de Baños</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                Creamos baños modernos, funcionales y estéticos. Desde reformas completas hasta remodelaciones parciales, utilizamos materiales de primera calidad resistentes a la humedad y de fácil mantenimiento.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Gres y porcelánicos antideslizantes</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Muebles de baño a medida</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Instalación de platos de ducha extraplanos</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span>Sistemas de iluminación LED empotrados</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Duchas modernas</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Bañeras hidromasaje</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Calefacción por suelo radiante</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Mamparas de cristal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cocinas Modernas -->
+            <div id="cocinas" class="mb-20">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Cocina moderna Barcelona" 
+                                 class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-utensils text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Cocinas Modernas</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                Diseñamos cocinas que combinan funcionalidad, estética y eficiencia energética. Trabajamos con los mejores fabricantes para ofrecerte soluciones a medida que se adaptan a tu estilo de vida.
+                            </p>
+                            <div class="mb-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Tipos de cocina que realizamos:</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h5 class="font-bold text-blue-600 mb-2">Cocinas Lineales</h5>
+                                        <p class="text-sm text-gray-600">Ideal para espacios alargados, máxima optimización</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h5 class="font-bold text-blue-600 mb-2">Cocinas en L</h5>
+                                        <p class="text-sm text-gray-600">Perfecta distribución del triángulo de trabajo</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h5 class="font-bold text-blue-600 mb-2">Cocinas con Isla</h5>
+                                        <p class="text-sm text-gray-600">Espacio amplio con zona de preparación central</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                                <p class="text-yellow-800">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    <span class="font-bold">Consejo profesional:</span> Incluimos siempre sistemas de extracción eficientes y materiales resistentes a la humedad y temperaturas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reformas de Locales -->
+            <div id="local" class="mb-20">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Reforma local comercial Barcelona" 
+                                 class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-store text-purple-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Reformas de Locales Comerciales</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                Especialistas en adaptar espacios comerciales para negocios en Barcelona. Optimizamos la distribución para mejorar la experiencia del cliente y el flujo de trabajo, cumpliendo con todas las normativas municipales.
+                            </p>
+                            <div class="mb-6">
+                                <h4 class="font-bold text-gray-900 mb-3">Tipos de locales que reformamos:</h4>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Restaurantes y bares</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tiendas de retail</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Oficinas y despachos</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Clínicas y centros médicos</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Gimnasios y centros deportivos</span>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <p class="text-gray-700">
+                                    <i class="fas fa-clipboard-check mr-2"></i>
+                                    <span class="font-bold">Incluimos:</span> Licencia de actividad, proyecto técnico, certificado de fin de obra y gestión con el ayuntamiento de Barcelona.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Otros Servicios -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Otros Servicios Especializados</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Servicio 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-red-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-fire-extinguisher text-red-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Instalaciones Eléctricas</h4>
+                        <p class="text-gray-600 mb-4">
+                            Actualización de cuadros eléctricos, instalación de puntos de luz, enchufes USB, domótica básica y certificados de instalación eléctrica.
+                        </p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li><i class="fas fa-bolt text-yellow-500 mr-2"></i>Certificado eléctrico</li>
+                            <li><i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Iluminación LED eficiente</li>
+                            <li><i class="fas fa-plug text-yellow-500 mr-2"></i>Enchufes con USB</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Servicio 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-teal-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-tint text-teal-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Fontanería y Saneamiento</h4>
+                        <p class="text-gray-600 mb-4">
+                            Reparación y renovación de instalaciones de agua, desatascos, instalación de sistemas de calefacción y agua caliente sanitaria.
+                        </p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li><i class="fas fa-shower text-blue-500 mr-2"></i>Cambio de tuberías</li>
+                            <li><i class="fas fa-fire text-orange-500 mr-2"></i>Calderas y termos</li>
+                            <li><i class="fas fa-wind text-gray-500 mr-2"></i>Desatascos urgentes</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Servicio 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-indigo-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-roller text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Pintura y Acabados</h4>
+                        <p class="text-gray-600 mb-4">
+                            Pintura interior y exterior con productos de máxima calidad, colocación de papel pintado, molduras y trabajos de decoración.
+                        </p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li><i class="fas fa-paint-brush text-purple-500 mr-2"></i>Pintura ecológica</li>
+                            <li><i class="fas fa-mountain text-brown-500 mr-2"></i>Revestimientos decorativos</li>
+                            <li><i class="fas fa-border-style text-gray-500 mr-2"></i>Molduras y cornisas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla Comparativa de Servicios -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Comparativa de Nuestros Servicios</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="py-3 px-4 text-left font-semibold text-gray-700">Servicio</th>
+                                <th class="py-3 px-4 text-left font-semibold text-gray-700">Tiempo Medio</th>
+                                <th class="py-3 px-4 text-left font-semibold text-gray-700">Garantía</th>
+                                <th class="py-3 px-4 text-left font-semibold text-gray-700">Incluye Permisos</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="py-3 px-4 font-medium text-gray-900">Reformas Integrales</td>
+                                <td class="py-3 px-4">4-8 semanas</td>
+                                <td class="py-3 px-4">3 años</td>
+                                <td class="py-3 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium text-gray-900">Reformas de Baños</td>
+                                <td class="py-3 px-4">2-3 semanas</td>
+                                <td class="py-3 px-4">2 años</td>
+                                <td class="py-3 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium text-gray-900">Cocinas Modernas</td>
+                                <td class="py-3 px-4">3-4 semanas</td>
+                                <td class="py-3 px-4">2 años</td>
+                                <td class="py-3 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium text-gray-900">Locales Comerciales</td>
+                                <td class="py-3 px-4">6-10 semanas</td>
+                                <td class="py-3 px-4">3 años</td>
+                                <td class="py-3 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CTA Final -->
+            <div id="contacto" class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl shadow-2xl p-8 md:p-12 text-white text-center">
+                <h3 class="text-3xl font-bold mb-4">¿Listo para transformar tu espacio?</h3>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Solicita una visita gratuita y recibe un presupuesto detallado sin compromiso
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="contacto.html" class="btn-primary bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg">
+                        <i class="fas fa-calendar-alt mr-2"></i>Pedir Presupuesto
+                    </a>
+                    <a href="tel:+34600123456" class="btn-secondary border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
+                        <i class="fas fa-phone-alt mr-2"></i>Llamar Ahora: 600 123 456
+                    </a>
+                </div>
+                <p class="mt-6 text-blue-200">
+                    <i class="fas fa-clock mr-2"></i>Disponibles de lunes a sábado de 8:00 a 20:00
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Preguntas Frecuentes</h2>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-semibold text-gray-900">¿Cómo funciona el proceso de presupuesto?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-600">Realizamos una visita gratuita para evaluar el espacio, tomamos medidas y analizamos tus necesidades. En 24-48 horas recibirás un presupuesto detallado con desglose de materiales, mano de obra y plazos. Sin compromiso.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-semibold text-gray-900">¿Trabajan en toda Barcelona?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-600">Sí, trabajamos en todos los distritos de Barcelona y área metropolitana: Eixample, Gràcia, Sarrià-Sant Gervasi, Les Corts, Sants-Montjuïc, Ciutat Vella, Sant Martí, Horta-Guinardó, Nou Barris y Sant Andreu.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-semibold text-gray-900">¿Ofrecen garantía en los trabajos?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-600">Por supuesto. Todos nuestros trabajos cuentan con garantía por escrito: 3 años para reformas integrales, 2 años para reformas parciales. Además, los materiales tienen la garantía del fabricante.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="mb-6">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-semibold text-gray-900">¿Puedo seguir viviendo en casa durante la reforma?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 p-4 bg-gray-50 rounded-lg">
+                        <p class="text-gray-600">En la mayoría de casos sí. Organizamos el trabajo por fases para minimizar molestias. Para reformas integrales recomendamos buscar alojamiento alternativo durante 1-2 semanas (la fase más intensa). Te asesoramos en la planificación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold text-gradient mb-4">ReformasPro</h3>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fas fa-hammer mr-2"></i>
+                        <span>Reformas<span class="text-orange-500">Barcelona</span></span>
+                    </div>
                     <p class="text-gray-400 mb-4">
                         Especialistas en reformas integrales en Barcelona con más de 15 años de experiencia.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="Facebook">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="Instagram">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="LinkedIn">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <a href="https://wa.me/34600123456" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
-
+                
                 <div>
-                    <h4 class="font-bold mb-4 text-lg">Servicios</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="./servicios.html" class="hover:text-primary transition-colors">Reformas Integrales</a></li>
-                        <li><a href="./servicios.html" class="hover:text-primary transition-colors">Locales Comerciales</a></li>
-                        <li><a href="./servicios.html" class="hover:text-primary transition-colors">Reparaciones</a></li>
-                        <li><a href="./servicios.html" class="hover:text-primary transition-colors">Cocinas y Baños</a></li>
-                        <li><a href="./servicios.html" class="hover:text-primary transition-colors">Pintura</a></li>
+                    <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
                     </ul>
                 </div>
-
+                
                 <div>
-                    <h4 class="font-bold mb-4 text-lg">Contacto</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-start">
-                            <span class="mr-2">📞</span>
-                            <div>
-                                <a href="tel:+34600000000" class="hover:text-primary transition-colors">600 000 000</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✉️</span>
-                            <div>
-                                <a href="mailto:info@reformaspro.com" class="hover:text-primary transition-colors">info@reformaspro.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">📍</span>
-                            <div>Barcelona y alrededores</div>
-                        </li>
+                    <h3 class="text-lg font-bold mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="servicios.html#integrales" class="footer-link">Reformas Integrales</a></li>
+                        <li><a href="servicios.html#banos" class="footer-link">Reformas de Baños</a></li>
+                        <li><a href="servicios.html#cocinas" class="footer-link">Cocinas Modernas</a></li>
+                        <li><a href="servicios.html#local" class="footer-link">Reformas de Locales</a></li>
                     </ul>
                 </div>
-
+                
                 <div>
-                    <h4 class="font-bold mb-4 text-lg">Horario</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><strong class="text-white">Lunes - Viernes:</strong><br>9:00 - 19:00</li>
-                        <li><strong class="text-white">Sábados:</strong><br>10:00 - 14:00</li>
-                        <li><strong class="text-white">Domingos:</strong><br>Cerrado</li>
-                    </ul>
+                    <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span class="text-gray-400">Barcelona y área metropolitana</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-orange-500"></i>
+                            <a href="tel:+34600123456" class="footer-link">+34 600 123 456</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-500"></i>
+                            <a href="mailto:info@reformasbarcelona.com" class="footer-link">info@reformasbarcelona.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
-                <p>&copy; 2024 ReformasPro. Todos los derechos reservados. | 
-                    <a href="#" class="hover:text-primary transition-colors">Política de Privacidad</a> | 
-                    <a href="#" class="hover:text-primary transition-colors">Aviso Legal</a>
-                </p>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Reformas Barcelona. Todos los derechos reservados.</p>
+                <p class="mt-2 text-sm">Trabajador autónomo inscrito en RETA - Licencia de actividad: AB-123456-X</p>
             </div>
         </div>
     </footer>
 
-    <!-- Botón WhatsApp -->
-    <a href="https://wa.me/34600000000?text=Hola,%20me%20gustaría%20solicitar%20un%20presupuesto" 
-    class="whatsapp-float" 
-    target="_blank"
-    aria-label="Contactar por WhatsApp">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.923 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.277c-0.307-0.153-1.813-0.893-2.093-0.997s-0.485-0.153-0.69 0.153c-0.204 0.307-0.792 0.997-0.972 1.203s-0.358 0.230-0.665 0.077c-1.846-0.923-3.058-1.649-4.273-3.742-0.323-0.558 0.323-0.519 0.926-1.727 0.102-0.204 0.051-0.383-0.026-0.537s-0.69-1.663-0.946-2.278c-0.251-0.597-0.506-0.516-0.69-0.526-0.179-0.009-0.383-0.011-0.588-0.011s-0.537 0.076-0.818 0.383c-0.281 0.307-1.074 1.050-1.074 2.556s1.099 2.964 1.252 3.168c0.153 0.204 2.149 3.279 5.207 4.598 1.936 0.835 2.694 0.671 3.181 0.629 0.742-0.064 1.813-0.741 2.068-1.456s0.256-1.329 0.179-1.456c-0.077-0.128-0.281-0.204-0.588-0.358z"/>
-        </svg>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/34600123456" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- FAQ Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Toggle answer
+                    answer.classList.toggle('hidden');
+                    
+                    // Toggle icon
+                    if (icon.classList.contains('fa-chevron-down')) {
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                    
+                    // Close other FAQs
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== this) {
+                            const otherAnswer = otherQuestion.nextElementSibling;
+                            const otherIcon = otherQuestion.querySelector('i');
+                            otherAnswer.classList.add('hidden');
+                            otherIcon.classList.remove('fa-chevron-up');
+                            otherIcon.classList.add('fa-chevron-down');
+                        }
+                    });
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

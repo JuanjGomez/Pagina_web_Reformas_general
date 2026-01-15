@@ -5,435 +5,318 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Reformas integrales en Barcelona con +15 años de experiencia. Especialistas en viviendas, locales comerciales y reparaciones. Presupuesto gratis sin compromiso. ☎️ 600 000 000">
-    <meta name="keywords" content="reformas Barcelona, reformas integrales Barcelona, reformas locales Barcelona, reformas viviendas Barcelona, empresa reformas Barcelona, presupuesto reformas Barcelona">
-    <meta name="author" content="ReformasPro">
-    <link rel="canonical" href="https://reformaspro.netlify.app/">
+    <meta name="description" content="Reformas integrales en Barcelona con +15 años de experiencia. Especialistas en viviendas, locales comerciales y reparaciones. Presupuesto gratis sin compromiso.">
+    <meta name="keywords" content="reformas Barcelona, reformas integrales Barcelona, reformas locales Barcelona">
+    <meta name="author" content="Reformas Barcelona">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://reformaspro.netlify.app/">
-    <meta property="og:title" content="Reformas Profesionales en Barcelona | ReformasPro">
-    <meta property="og:description" content="Especialistas en reformas integrales con +15 años de experiencia en Barcelona. Presupuesto gratis sin compromiso.">
-    <meta property="og:image" content="https://reformaspro.netlify.app/assets/img/og-image.jpg">
-    <meta property="og:locale" content="es_ES">
+    <title>Reformas Profesionales en Barcelona | Presupuesto Gratis</title>
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://reformaspro.netlify.app/">
-    <meta name="twitter:title" content="Reformas Profesionales en Barcelona | ReformasPro">
-    <meta name="twitter:description" content="Especialistas en reformas integrales con +15 años de experiencia en Barcelona.">
-    <meta name="twitter:image" content="https://reformaspro.netlify.app/assets/img/og-image.jpg">
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Geo Tags -->
-    <meta name="geo.region" content="ES-CT">
-    <meta name="geo.placename" content="Barcelona">
-    <meta name="geo.position" content="41.385064;2.173404">
-    <meta name="ICBM" content="41.385064, 2.173404">
-    
-    
-    <title>Reformas Profesionales en Barcelona | ReformasPro - Presupuesto Gratis</title>
+    <!-- Tailwind configuration (solo lo esencial) -->
     <script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    primary: {
-                        DEFAULT: '#FF6B35',
-                        dark: '#E85A28',
-                        light: '#FF8C61'
-                    },
-                    secondary: {
-                        DEFAULT: '#1E3A8A',
-                        dark: '#1E293B',
-                        light: '#3B82F6'
-                    },
-                    accent: '#10B981'
-                },
-                fontFamily: {
-                    heading: ['Outfit', 'sans-serif'],
-                    body: ['Inter', 'sans-serif']
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#f97316',
+                    }
                 }
             }
         }
-    }
-</script>
-<script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/custom.css">
-    <script defer src="./assets/js/main.js"></script>
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "https://reformaspro.netlify.app/#organization",
-        "name": "ReformasPro",
-        "image": "https://reformaspro.netlify.app/assets/img/logo.png",
-        "description": "Empresa de reformas integrales en Barcelona con más de 15 años de experiencia",
-        "url": "https://reformaspro.netlify.app/",
-        "telephone": "+34600000000",
-        "email": "info@reformaspro.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Barcelona",
-            "addressRegion": "Cataluña",
-            "addressCountry": "ES"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "41.385064",
-            "longitude": "2.173404"
-        },
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "09:00",
-                "closes": "19:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "10:00",
-                "closes": "14:00"
-            }
-        ],
-        "priceRange": "€€",
-        "areaServed": {
-            "@type": "City",
-            "name": "Barcelona"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "127"
-        },
-        "sameAs": [
-            "https://www.facebook.com/reformaspro",
-            "https://www.instagram.com/reformaspro",
-            "https://www.linkedin.com/company/reformaspro"
-        ]
-    }
     </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS - IMPORTANTE: Ruta relativa corregida -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/000000/hammer.png">
 </head>
-<body class="font-sans text-gray-800">
-    <header class="header-blur fixed w-full top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-
-            <div class="text-2xl font-bold text-gradient">
-                ReformasPro
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600">
+                        <i class="fas fa-hammer mr-2"></i>
+                        <span>Reformas<span class="text-orange-500">Barcelona</span></span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    <a href="pages/servicios.html" class="nav-link">Servicios</a>
+                    <a href="pages/sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                    <a href="pages/contacto.html" class="nav-link">Contacto</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="pages/contacto.html" class="hidden md:block btn-primary">
+                    Presupuesto Gratis
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuButton" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
-
-            <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-[#FF6B35] transition-colors font-semibold">Inicio</a>
-                <a href="./pages/servicios.html" class="hover:text-[#FF6B35] transition-colors">Servicios</a>
-                <a href="./pages/sobre-nosotros.html" class="hover:text-[#FF6B35] transition-colors">Sobre Nosotros</a>
-                <a href="./pages/contacto.html" class="hover:text-[#FF6B35] transition-colors">Contacto</a>
-            </nav>
-
-            <button id="menu-btn" class="md:hidden text-2xl">
-                ☰
-            </button>
-
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden bg-white py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="mobile-nav-link active">Inicio</a>
+                    <a href="pages/servicios.html" class="mobile-nav-link">Servicios</a>
+                    <a href="pages/sobre-nosotros.html" class="mobile-nav-link">Sobre Nosotros</a>
+                    <a href="pages/contacto.html" class="mobile-nav-link">Contacto</a>
+                    <a href="pages/contacto.html" class="btn-primary text-center">Presupuesto Gratis</a>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
-            <a href="index.html" class="block py-2">Inicio</a>
-            <a href="./pages/servicios.html" class="block py-2">Servicios</a>
-            <a href="./pages/sobre-nosotros.html" class="block py-2">Sobre Nosotros</a>
-            <a href="./pages/contacto.html" class="block py-2">Contacto</a>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Reformas de Calidad en 
+                        <span class="text-blue-600">Barcelona</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Transformamos espacios con profesionalidad y atención al detalle. 
+                        Más de 15 años de experiencia en reformas integrales en Barcelona.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="pages/contacto.html" class="btn-primary">
+                            <i class="fas fa-calendar-check mr-2"></i>Solicitar Presupuesto
+                        </a>
+                        <a href="tel:+34600123456" class="btn-secondary">
+                            <i class="fas fa-phone mr-2"></i>Llamar Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="Reforma de cocina Barcelona" 
+                             class="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="absolute -bottom-4 -left-4 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-medal text-blue-600 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900"><span id="projectsCounter">250</span>+ Proyectos</h3>
+                                    <p class="text-gray-600 text-sm">Completados en Barcelona</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-    <main class="">
-        <section
-            class="pt-24 min-h-screen flex items-center bg-cover bg-center relative"
-            style="background-image: url(https://images.unsplash.com/photo-1581093458791-9a1b3c4f3b0c);"
-        >
-            <div class="absolute inset-0 bg-gradient-to-br from-[#1E3A8A]/90 to-[#FF6B35]/80"></div>
-            <div class="relative z-10 max-w-4xl mx-auto px-4 text-white text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Reformas <span class="text-gradient">Profesionales</span> en Barcelona
-                </h1>
-                <p class="text-xl mb-8 text-gray-100">
-                    Especialistas en viviendas, locales y reparaciones en general.
+    </section>
+
+    <!-- Servicios Destacados -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Soluciones integrales para transformar tu hogar o negocio en Barcelona
                 </p>
-                <a 
-                    href="./pages/contacto.html"
-                    class="btn-premium inline-block px-8 py-4 rounded-lg text-white font-semibold text-lg"
-                >
-                    Solicitar Presupuesto Gratis
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon bg-blue-100">
+                        <i class="fas fa-home text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Reformas Integrales</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transformación completa de viviendas y locales en Barcelona.
+                    </p>
+                    <a href="pages/servicios.html#integrales" class="text-blue-600 font-medium hover:text-blue-700 flex items-center">
+                        Ver más <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon bg-orange-100">
+                        <i class="fas fa-bath text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Reformas de Baños</h3>
+                    <p class="text-gray-600 mb-4">
+                        Modernización completa con los mejores materiales.
+                    </p>
+                    <a href="pages/servicios.html#banos" class="text-blue-600 font-medium hover:text-blue-700 flex items-center">
+                        Ver más <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon bg-green-100">
+                        <i class="fas fa-utensils text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cocinas Modernas</h3>
+                    <p class="text-gray-600 mb-4">
+                        Diseño funcional y estético para el corazón del hogar.
+                    </p>
+                    <a href="pages/servicios.html#cocinas" class="text-blue-600 font-medium hover:text-blue-700 flex items-center">
+                        Ver más <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="pages/servicios.html" class="btn-outline">
+                    Ver Todos los Servicios
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Sección de Estadísticas -->
-        <section class="bg-white py-16 border-b border-gray-100">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="grid md:grid-cols-4 gap-8 text-center">
-                    <div class="observe">
-                        <div class="text-5xl font-bold text-gradient mb-2">15+</div>
-                        <p class="text-gray-600 font-medium">Años de Experiencia</p>
-                    </div>
-                    <div class="observe delay-100">
-                        <div class="text-5xl font-bold text-gradient mb-2">500+</div>
-                        <p class="text-gray-600 font-medium">Proyectos Completados</p>
-                    </div>
-                    <div class="observe delay-200">
-                        <div class="text-5xl font-bold text-gradient mb-2">98%</div>
-                        <p class="text-gray-600 font-medium">Clientes Satisfechos</p>
-                    </div>
-                    <div class="observe delay-300">
-                        <div class="text-5xl font-bold text-gradient mb-2">24h</div>
-                        <p class="text-gray-600 font-medium">Tiempo de Respuesta</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">
-                    Nuestros <span class="text-gradient">Servicios</span>
-                </h2>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="card-glass rounded-xl p-6 animate-fade-in-up">
-                        <div class="text-5xl mb-4">🏠</div>
-                        <h3 class="text-2xl font-bold mb-3">
-                            Reformas Integrales
-                        </h3>
-                        <p class="text-gray-600">
-                            Renovamos tu vivienda completa, cuidando cada detalle y cumpliendo plazos.
-                        </p>
-                    </div>
-
-                    <div class="card-glass rounded-xl p-6 animate-fade-in-up delay-100">
-                        <div class="text-5xl mb-4">🏢</div>
-                        <h3 class="text-2xl font-bold mb-3">
-                            Locales Comerciales
-                        </h3>
-                        <p class="text-gray-600">
-                            Adaptamos tu negocio cumpliendo normativas y minimizando tiempos de cierre.
-                        </p>
-                    </div>
-
-                    <div class="card-glass rounded-xl p-6 animate-fade-in-up delay-200">
-                        <div class="text-5xl mb-4">🔧</div>
-                        <h3 class="text-2xl font-bold mb-3">
-                            Reparaciones
-                        </h3>
-                        <p class="text-gray-600">
-                            Electricidad, fontanería, pintura y mantenimiento general.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">
-                    ¿Por qué <span class="text-gradient">elegirnos</span>?
-                </h2>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="card-glass rounded-xl p-6 animate-fade-in-up">
-                        <div class="text-5xl mb-4">✅</div>
-                        <h3 class="text-2xl font-bold mb-3">
-                            Calidad
-                        </h3>
-                        <p class="text-gray-600">
-                            Materiales premium y acabados perfectos.
-                        </p>
-                    </div>
-
-                    <div class="card-glass rounded-xl p-6 animate-fade-in-up delay-100">
-                        <div class="text-5xl mb-4">⚡</div>
-                        <h3 class="text-2xl font-bold mb-3">
-                            Rapidez
-                        </h3>
-                        <p class="text-gray-600">
-                            Cumplimiento de plazos garantizado.
-                        </p>
-                    </div>
-
-                    <div class="card-glass rounded-xl p-6 animate-fade-in-up delay-200">
-                        <div class="text-5xl mb-4">💰</div>
-                        <h3 class="text-2xl font-bold mb-3">
-                            Precio Justo
-                        </h3>
-                        <p class="text-gray-600">
-                            Presupuestos transparentes sin sorpresas.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Testimonios -->
-        <!-- Sección Por qué elegirnos -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-4">
-                    Lo que dicen nuestros <span class="text-gradient">clientes</span>
-                </h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                    La satisfacción de nuestros clientes es nuestra mejor carta de presentación
-                </p>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Testimonio 1 -->
-                    <div class="card-glass rounded-xl p-8 text-center observe shadow-card border-subtle">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                M
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold">María González</h4>
-                                <div class="text-yellow-500">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 italic">
-                            "Excelente trabajo en la reforma de mi piso. Cumplieron los plazos y el resultado superó mis expectativas. Muy profesionales."
-                        </p>
-                    </div>
-
-                    <!-- Testimonio 2 -->
-                    <div class="card-glass rounded-xl p-8 text-center observe delay-100 shadow-card border-subtle">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                J
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold">Jordi Martínez</h4>
-                                <div class="text-yellow-500">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 italic">
-                            "Reformaron mi local comercial en tiempo récord. Trato cercano y presupuesto ajustado. Los recomiendo 100%."
-                        </p>
-                    </div>
-
-                    <!-- Testimonio 3 -->
-                    <div class="card-glass rounded-xl p-8 text-center observe delay-200 shadow-card border-subtle">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                C
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold">Carmen López</h4>
-                                <div class="text-yellow-500">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 italic">
-                            "Profesionales de principio a fin. Me asesoraron en todo momento y el acabado de mi cocina es espectacular."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-blue-600 py-16 text-white text-center">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-4">
-                    ¿Hablamos de tu proyecto?
-                </h2>
-                <p class="mb-6">
-                    Solicita tu presupuesto sin compromiso
-                </p>
-                <a
-                    href="./pages/contacto.html"
-                    class="bg-white text-blue-600 px-6 py-3 rounded font-semibold hover:bg-gray-100"
-                >
-                    Contactar ahora
-                </a>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <!-- Columna 1: Sobre la empresa -->
+    <!-- Por qué elegirnos -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-2xl font-bold text-gradient mb-4">ReformasPro</h3>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                        ¿Por qué elegirnos para tu reforma en Barcelona?
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Experiencia Local</h3>
+                                <p class="text-gray-600">Conocemos Barcelona y sus particularidades arquitectónicas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-euro-sign text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Presupuestos Claros</h3>
+                                <p class="text-gray-600">Sin sorpresas ni costes ocultos. Transparencia total.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                                <i class="fas fa-calendar-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 mb-1">Cumplimos Plazos</h3>
+                                <p class="text-gray-600">Planificación rigurosa para entregar en tiempo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Equipo de reformas Barcelona" 
+                         class="rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fas fa-hammer mr-2"></i>
+                        <span>Reformas<span class="text-orange-500">Barcelona</span></span>
+                    </div>
                     <p class="text-gray-400 mb-4">
-                        Especialistas en reformas integrales en Barcelona con más de 15 años de experiencia.
+                        Profesionales en reformas integrales en Barcelona y área metropolitana.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="Facebook">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="Instagram">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors" aria-label="LinkedIn">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <a href="https://wa.me/34600123456" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Columna 2: Servicios -->
+                
                 <div>
-                    <h4 class="font-bold mb-4 text-lg">Servicios</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="./pages/servicios.html" class="hover:text-primary transition-colors">Reformas Integrales</a></li>
-                        <li><a href="./pages/servicios.html" class="hover:text-primary transition-colors">Locales Comerciales</a></li>
-                        <li><a href="./pages/servicios.html" class="hover:text-primary transition-colors">Reparaciones</a></li>
-                        <li><a href="./pages/servicios.html" class="hover:text-primary transition-colors">Cocinas y Baños</a></li>
-                        <li><a href="./pages/servicios.html" class="hover:text-primary transition-colors">Pintura</a></li>
+                    <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="pages/servicios.html" class="footer-link">Servicios</a></li>
+                        <li><a href="pages/sobre-nosotros.html" class="footer-link">Sobre Nosotros</a></li>
+                        <li><a href="pages/contacto.html" class="footer-link">Contacto</a></li>
                     </ul>
                 </div>
-
-                <!-- Columna 3: Contacto -->
+                
                 <div>
-                    <h4 class="font-bold mb-4 text-lg">Contacto</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-start">
-                            <span class="mr-2">📞</span>
-                            <div>
-                                <a href="tel:+34600000000" class="hover:text-primary transition-colors">600 000 000</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✉️</span>
-                            <div>
-                                <a href="mailto:info@reformaspro.com" class="hover:text-primary transition-colors">info@reformaspro.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">📍</span>
-                            <div>Barcelona y alrededores</div>
-                        </li>
+                    <h3 class="text-lg font-bold mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="pages/servicios.html#integrales" class="footer-link">Reformas Integrales</a></li>
+                        <li><a href="pages/servicios.html#banos" class="footer-link">Reformas de Baños</a></li>
+                        <li><a href="pages/servicios.html#cocinas" class="footer-link">Cocinas Modernas</a></li>
+                        <li><a href="pages/servicios.html#local" class="footer-link">Reformas de Locales</a></li>
                     </ul>
                 </div>
-
-                <!-- Columna 4: Horario -->
+                
                 <div>
-                    <h4 class="font-bold mb-4 text-lg">Horario</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><strong class="text-white">Lunes - Viernes:</strong><br>9:00 - 19:00</li>
-                        <li><strong class="text-white">Sábados:</strong><br>10:00 - 14:00</li>
-                        <li><strong class="text-white">Domingos:</strong><br>Cerrado</li>
-                    </ul>
+                    <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span class="text-gray-400">Barcelona y área metropolitana</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-orange-500"></i>
+                            <a href="tel:+34600123456" class="footer-link">+34 600 123 456</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-500"></i>
+                            <a href="mailto:info@reformasbarcelona.com" class="footer-link">info@reformasbarcelona.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Copyright -->
-            <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
-                <p>&copy; 2024 ReformasPro. Todos los derechos reservados. | 
-                    <a href="#" class="hover:text-primary transition-colors">Política de Privacidad</a> | 
-                    <a href="#" class="hover:text-primary transition-colors">Aviso Legal</a>
-                </p>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Reformas Barcelona. Todos los derechos reservados.</p>
+                <p class="mt-2 text-sm">Trabajador autónomo inscrito en RETA</p>
             </div>
         </div>
     </footer>
-    <!-- Botón WhatsApp -->
-    <a href="https://wa.me/34600000000?text=Hola,%20me%20gustaría%20solicitar%20un%20presupuesto" 
-    class="whatsapp-float" 
-    target="_blank"
-    aria-label="Contactar por WhatsApp">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.923 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.277c-0.307-0.153-1.813-0.893-2.093-0.997s-0.485-0.153-0.69 0.153c-0.204 0.307-0.792 0.997-0.972 1.203s-0.358 0.230-0.665 0.077c-1.846-0.923-3.058-1.649-4.273-3.742-0.323-0.558 0.323-0.519 0.926-1.727 0.102-0.204 0.051-0.383-0.026-0.537s-0.69-1.663-0.946-2.278c-0.251-0.597-0.506-0.516-0.69-0.526-0.179-0.009-0.383-0.011-0.588-0.011s-0.537 0.076-0.818 0.383c-0.281 0.307-1.074 1.050-1.074 2.556s1.099 2.964 1.252 3.168c0.153 0.204 2.149 3.279 5.207 4.598 1.936 0.835 2.694 0.671 3.181 0.629 0.742-0.064 1.813-0.741 2.068-1.456s0.256-1.329 0.179-1.456c-0.077-0.128-0.281-0.204-0.588-0.358z"/>
-        </svg>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/34600123456" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Custom JS - Ruta relativa corregida -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
